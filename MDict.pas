@@ -35,13 +35,16 @@ type
     
     {$region ICollection}
     
+    //TODO #3124
     ///--
     public procedure Clear := ClearAll;
     
+    //TODO #3124
     ///--
     public function Contains(kv: KeyValuePair<TKey,TValue>) :=
       kv.Value in Values[kv.Key];
     
+    //TODO #3124
     ///--
     public procedure CopyTo(a: array of KeyValuePair<TKey,TValue>; i: integer) :=
       foreach var kv in self do
@@ -50,6 +53,7 @@ type
         i += 1;
       end;
     
+    //TODO #3124
     ///--
     public function Remove(kv: KeyValuePair<TKey,TValue>): boolean;
     begin
@@ -57,6 +61,7 @@ type
       raise new System.NotImplementedException;
     end;
     
+    //TODO #3124
     ///--
     public property IsReadOnly: boolean read boolean(false);
     
