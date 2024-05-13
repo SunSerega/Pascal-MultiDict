@@ -359,7 +359,7 @@ type
       var old_keys := new List<TKey>;
       foreach var ie in used_hashes.Enumerate(entry_index) do
       begin
-        var entry_ind := ie.head_ind;
+        var entry_ind := ie.head_ind-1;
         {$ifdef DEBUG}
         if entry_ind=-1 then
           raise new System.InvalidOperationException;
